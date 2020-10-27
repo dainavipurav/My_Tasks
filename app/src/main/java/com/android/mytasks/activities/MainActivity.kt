@@ -9,7 +9,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.android.mytasks.R
 
-class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedListener {
+class MainActivity : AppCompatActivity() {
 
     lateinit var mNavControllerMain: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,26 +18,12 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
 
         mNavControllerMain =
             this@MainActivity.findNavController(R.id.navHostFragmentContainer)
-        mNavControllerMain.addOnDestinationChangedListener(this@MainActivity)
 
-        setupActionBarWithNavController(navController = mNavControllerMain, AppBarConfiguration(
-            topLevelDestinationIds = setOf(
-               R.id.homeFragment
-            )
-        ))
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
-
-    override fun onDestinationChanged(
-        controller: NavController,
-        destination: NavDestination,
-        arguments: Bundle?
-    ) {
+        setupActionBarWithNavController(mNavControllerMain)
 
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
+        return mNavControllerMain.navigateUp() || super.onSupportNavigateUp()
     }
 }

@@ -14,7 +14,8 @@
         <action
             android:id="@+id/action_homeFragment_to_addFragment2"
             app:destination="@id/addFragment"
-            app:popUpTo="@id/homeFragment"/>
+            app:popUpTo="@id/homeFragment"
+            />
         <action
             android:id="@+id/action_homeFragment_to_listFragment2"
             app:destination="@id/listFragment"
@@ -25,10 +26,12 @@
         android:id="@+id/addFragment"
         android:name="com.android.mytasks.fragments.AddFragment"
         android:label="Add Task"
-        tools:layout="@layout/fragment_add"/>
+        tools:layout="@layout/fragment_add">
+    </fragment>
     <fragment
         android:id="@+id/listFragment"
         android:name="com.android.mytasks.fragments.ListFragment"
         android:label="Task List"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+    </fragment>
 </navigation>

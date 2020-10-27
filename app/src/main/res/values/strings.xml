@@ -1,12 +1,19 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">My Tasks</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="text_string_my_task_count">My Task Count : </string>
+    <string name="text_string_my_task_count">My Task Count</string>
     <string name="text_title_my_latest_task">My Latest Task</string>
     <string name="text_string_task">Task</string>
     <string name="text_string_0">0</string>
     <string name="text_string_title">Title</string>
     <string name="text_string_description">Description</string>
     <string name="text_string_add">Add</string>
+    <string name="text_string_field_cant_be_empty">Field can\'t be empty.</string>
+
+    <string name="task_list_item">
+        <b><xliff:g example="task_title:" id="task_title">%s</xliff:g></b>\n<b><xliff:g example="task_description:" id="task_description">%s</xliff:g></b>
+    </string>
+    <string name="text_string_no_data_found">No Data Found</string>
+
 </resources>
