@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".fragments.HomeFragment">
+
+    <TextView
+        android:id="@+id/textViewHomeTaskCounterHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/text_string_my_task_count"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideLineHomeEnd"
+        app:layout_constraintStart_toEndOf="@id/guideLineHomeStart"
+        app:layout_constraintTop_toBottomOf="@id/guideLineHomeTop" />
+
+    <TextView
+        android:id="@+id/textViewHomeTaskCounterDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/text_string_0"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@id/guideLineHomeEnd"
+        app:layout_constraintStart_toEndOf="@id/guideLineHomeStart"
+        app:layout_constraintTop_toBottomOf="@id/textViewHomeTaskCounterHeading" />
+
+    <TextView
+        android:id="@+id/textViewHomeLatestTaskHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/material_dimen_mdpi"
+        android:gravity="center"
+        android:text="@string/text_title_my_latest_task"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideLineHomeEnd"
+        app:layout_constraintStart_toEndOf="@id/guideLineHomeStart"
+        app:layout_constraintTop_toBottomOf="@id/textViewHomeTaskCounterDescription" />
+
+    <TextView
+        android:id="@+id/textViewHomeLatestTaskDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/text_string_task"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@id/guideLineHomeEnd"
+        app:layout_constraintStart_toEndOf="@id/guideLineHomeStart"
+        app:layout_constraintTop_toBottomOf="@id/textViewHomeLatestTaskHeading" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonHomeAddTask"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/material_dimen_mdpi"
+        android:background="@color/colorAccent"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toTopOf="@id/floatingActionButtonHomeShowTaskList"
+        app:layout_constraintEnd_toStartOf="@id/guideLineHomeEnd"
+        app:layout_constraintTop_toBottomOf="@id/textViewHomeLatestTaskDescription"
+        app:layout_constraintVertical_bias="1" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonHomeShowTaskList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/material_dimen_mdpi"
+        android:background="@color/colorAccent"
+        android:src="@drawable/ic_list"
+        app:layout_constraintBottom_toTopOf="@id/guideLineHomeBottom"
+        app:layout_constraintEnd_toStartOf="@id/guideLineHomeEnd"
+        app:layout_constraintVertical_bias="1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHomeStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHomeEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHomeTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHomeBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
